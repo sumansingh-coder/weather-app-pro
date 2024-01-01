@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha384-nRKIsOwkWDtLXI2yVQpY3/KpL5YUAfxqo5lXsNYIkUoB9UbU/E1f8RSWBE5RlF2R" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div class="cur-con-weather-card card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+                <h2 class="cur-con-weather-card__title">
+                    Current Weather
+                </h2>
+                <!-- <button onclick="myFunction()">Toggle dark mode</button></div> -->
+                <label class="switch">
+                    <input id="toggleswitch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="d-flex">
+                <p class="cur-con-weather-card__subtitle ">
+                    <span id='date'></span><br>
+                    <span id='time'></span>
+                </p>
+                <div class="searchbar" style="margin-left: 180px; ">
+                    <input style="text-align: center ;border: none; border-bottom: 2px solid black ; outline: none;"
+                        id='searchid' type="text" placeholder="Search..">
+                    <button class="btn-search" id="searchButton" onclick="searchit()">Search</button>
+                </div>
+            </div>
+            <div class="forecast-container">
+                <div class="weather-icon"></div>
+                <div class="temp-container">
+                    <div class="temp"><span class="after-temp"></span></div>
+                    <div class="humidity text-center">
+                        Juinrepolis Incl
+                    </div>
+                </div>
+            </div>
+            <div class="spaced-content d-none ">
+                <span class="phrase"></span>
+                <span class="cur-con-weather-card__cta">
+                    <span class="more-details">More Details</span>
+
+                </span>
+            </div>
+            <div class="hidden-details">
+                <span id="pressure"></span><br>
+                <span id="windspeed"></span><br>
+                <span id="sunset"></span><br>
+                <span id="sunrise"></span><br>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        $("#toggleswitch").change(function () {
+            console.log('hi');
+            var element = $(".card");
+            element.toggleClass("dark-mode", this.checked);
+
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
